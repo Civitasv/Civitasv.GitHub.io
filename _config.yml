@@ -57,7 +57,7 @@ netease_comment: false
 ba_track_id: "8af4d967fb513f695c9070beeea8e169"
 
 # Google Analytics
-ga_track_id: "UA-36723568-3" # Format: UA-xxxxxx-xx
+ga_track_id: "G-E9T92SD5X4" # Google Analytics（分析）4 媒体资源
 ga_domain: civitasv.github.io
 
 # Sidebar settings

@@ -61,5 +61,34 @@
     <![endif]-->
 
     <!-- ga & ba script hoook -->
+    <!-- Google Analytics -->
+    {% if site.ga_track_id and jekyll.environment == 'production'%}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga_track_id }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '{{ site.ga_track_id }}');
+    </script>
+    {% endif %}
+
+    <!-- Baidu Tongji -->
+    {% if site.ba_track_id %}
+    <script>
+        // dynamic User by Hux
+        var _baId = '{{ site.ba_track_id }}';
+
+        // Originial
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?" + _baId;
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    {% endif %}
     <script></script>
 </head>
