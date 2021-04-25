@@ -12,8 +12,9 @@ baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 future: true
 # SNS settings
 RSS: false
-zhihu_username: lan-se-53-11
+juejin_username: 1714893872434862
 github_username: Civitasv
+csdn_username: qq_40996400
 
 # Build settings
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
@@ -42,7 +43,7 @@ kramdown:
     span:
       line_numbers: false
     block:
-      line_numbers: false
+      line_numbers: true
       start_line: 1
 
 # Disqus settings
