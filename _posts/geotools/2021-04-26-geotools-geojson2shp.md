@@ -2,7 +2,7 @@
 layout: post
 title: "使用GeoTools进行GeoJSON和Shp的互相转换"
 subtitle: "GeoJSON to shapefile conversion with geotools"
-excerpt: ""
+excerpt: "GeoTools 是基于 OGC 规范的开源 Java GIS 库，支持如 csv、geojson、shapefile、wfs 等矢量数据格式的读取和转换，本文介绍如何使用 GeoTools 实现geojson 与 shp 数据的相互转换"
 date: 2021-04-26
 author: "Civitasv"
 catalog: true
@@ -15,7 +15,7 @@ tags:
 
 ## 问题背景
 
-最近在做的软件[POIKit](https://civitasv.github.io/AMapPoi/)需要提供 geojson 与 shp 数据的相互转换，考虑使用 GeoTools 实现该功能，GeoTools 是基于 OGC 规范的开源 Java GIS 库，支持如 csv、geojson、shapefile、wfs 等矢量数据格式的读取和转换，但官网仅提供了关于[csv 转换至 shp](<(https://docs.geotools.org/latest/userguide/tutorial/feature/csv2shp.html)>)的教程，国内外关于二者数据转换的文章也不太丰富，经过了一番挫折之后，我找到了一种实现二者互相转换的简单方式。
+最近在做的软件[POIKit](https://civitasv.github.io/AMapPoi/)需要提供 geojson 与 shp 数据的相互转换，考虑使用 GeoTools 实现该功能，GeoTools 是基于 OGC 规范的开源 Java GIS 库，支持如 csv、geojson、shapefile、wfs 等矢量数据格式的读取和转换，但官网仅提供了关于[csv 转换至 shp](https://docs.geotools.org/latest/userguide/tutorial/feature/csv2shp.html)的教程，国内外关于二者数据转换的文章也不太丰富，经过了一番挫折之后，我找到了一种实现二者互相转换的简单方式。
 
 ## 使用 Maven 安装 geotools
 
@@ -157,9 +157,9 @@ try (FeatureIterator<SimpleFeature> features2 = features.features()) {
 }
 ```
 
-**最后，根据官网给出的[csv 转换至 shp](<(https://docs.geotools.org/latest/userguide/tutorial/feature/csv2shp.html)>)的教程，我们可以写出 features to shapefile 的方法。**
+**最后，根据官网给出的[csv 转换至 shp](https://docs.geotools.org/latest/userguide/tutorial/feature/csv2shp.html)的教程，我们可以写出 features to shapefile 的方法。**
 
-<div id="geojson2shp"/>
+<i id="geojson2shp"/>
 
 该功能的完整代码如下：
 
@@ -330,7 +330,7 @@ public static boolean transformShpToGeoJson(String shpPath, String geojsonPath) 
 
 GeoJSON 和 Shapefile 的互相转换是 GISer 十分常见的问题，本人开发的软件 POIKit 便提供了该功能。目前支持 geojson 转为 shp，shp 转为 geojson/csv。
 
-![格式转换](/img/in-post/geotoosl/POIKit-格式转换.png)
+![格式转换](/img/in-post/geotools/POIKit-coordinate-transform.png)
 
 ## 代码
 
