@@ -608,7 +608,7 @@ function syncLogout(event) {
 
 下为系统主页面，用户具有**管理员**角色，不具有**普通用户**角色效果：
 
-![jwt homepage](/img/in-post/spring/jwt-homepage.png)
+![jwt homepage](/img/in-post/spring/jwt-homepage.gif)
 
 实现功能：若用户具有**普通用户**角色，则可以进入`Normal User`页面，若用户具有**管理员**角色，则可以进入`Administrator`页面。
 
